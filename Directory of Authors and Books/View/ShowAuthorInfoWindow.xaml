@@ -1,0 +1,35 @@
+﻿<Window x:Class="Directory_of_Authors_and_Books.View.ShowAuthorInfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Directory_of_Authors_and_Books.View"
+        mc:Ignorable="d"
+        Title="ShowAuthorInfoWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="Имя" HorizontalAlignment="Left" Height="41" Margin="112,17,0,0" VerticalAlignment="Top" Width="54" FontSize="22"/>
+        <TextBox x:Name="FirstName" HorizontalAlignment="Left" Height="40" Margin="47,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" FontSize="22"/>
+
+        <Label Content="Фамилия" HorizontalAlignment="Left" Height="39" Margin="86,114,0,0" VerticalAlignment="Top" Width="110" FontSize="22"/>
+        <TextBox x:Name="LastName" HorizontalAlignment="Left" Height="40" Margin="49,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" FontSize="22"/>
+
+        <Label Content="Отчество" HorizontalAlignment="Left" Height="36" Margin="88,220,0,0" VerticalAlignment="Top" Width="106" FontSize="22"/>
+        <TextBox x:Name="MiddleName" HorizontalAlignment="Left" Height="40" Margin="47,261,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" FontSize="22"/>
+
+        <Label Content="Дата рождения" HorizontalAlignment="Left" Height="42" Margin="57,315,0,0" VerticalAlignment="Top" Width="168" FontSize="22"/>
+        <TextBox x:Name="Birthday" HorizontalAlignment="Left" Height="35" Margin="49,362,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" FontSize="22" />
+
+        <Label Content="Книги этого автора" HorizontalAlignment="Center" Margin="0,26,0,0" VerticalAlignment="Top" Width="204" FontSize="22"/>
+        <ListView x:Name="lvBooks" Margin="276,73,276,10" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Title" DisplayMemberBinding="{Binding Title}" />
+                    <GridViewColumn Header="Year of issue" DisplayMemberBinding="{Binding YearOfIssue}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Добавить книгу автору" HorizontalAlignment="Left" Height="45" Margin="565,69,0,0" VerticalAlignment="Top" Width="132" Click="AddBookToThisAuthorButton_Click"/>
+        <Button Content="Удалить книгу у автора" HorizontalAlignment="Left" Height="45" Margin="565,143,0,0" VerticalAlignment="Top" Width="132" Click="DeleteBookButton_Click"/>
+
+    </Grid>
+</Window>

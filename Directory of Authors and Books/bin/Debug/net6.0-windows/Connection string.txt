@@ -1,0 +1,1 @@
+Data Source=LAPTOP-HB9PP5FR;Initial Catalog=""EF Directory of Authors and Books"";Integrated Security=True;TrustServerCertificate=true
